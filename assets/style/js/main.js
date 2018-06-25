@@ -79,15 +79,19 @@ $(document).ready(function() {
        $("[data-fancybox]").fancybox();
 
 
-       $(".items").isotope({
+       var $items = $(".items").isotope({
            filter: '*',
            animationOptions: {
                duration: 1500,
                easing: 'linear',
                queue: false, 
-               layoutMode: 'fitsRows'
+              
            }
        });
+    
+        $items.imagesLoaded().progress(function(){
+            $items.isotope('layout');
+        });
    
        $("#filters a").click(function() {
    
@@ -102,7 +106,7 @@ $(document).ready(function() {
                    duration: 1500,
                    easing: 'linear',
                    queue: false ,
-                   layoutMode: 'fitsRows'
+                   
                }
            });
    
