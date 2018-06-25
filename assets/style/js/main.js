@@ -101,7 +101,8 @@ $(document).ready(function() {
                animationOptions: {
                    duration: 1500,
                    easing: 'linear',
-                   queue: false
+                   queue: false ,
+                   layoutMode: 'fitsRows'
                }
            });
    
