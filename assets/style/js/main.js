@@ -79,7 +79,7 @@ $(document).ready(function() {
        $("[data-fancybox]").fancybox();
 
 
-       var $items = $(".items").isotope({
+        $(".items").isotope({
            filter: '*',
            animationOptions: {
                duration: 1500,
@@ -89,9 +89,7 @@ $(document).ready(function() {
            }
        });
     
-        $items.imagesLoaded().progress(function(){
-            $items.isotope('layout');
-        });
+     
    
        $("#filters a").click(function() {
    
